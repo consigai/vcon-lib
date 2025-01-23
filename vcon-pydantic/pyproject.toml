@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "vcon-pydantic"
+version = "0.1.0"
+description = "Pydantic-v2 models for vCon"
+authors = ["Andreea Olea <andreea@consig.ai>"]
+packages = [
+    {include = "vcon", from = "../src"},
+    {include = "vcon_pydantic", from = "src"}
+]
+
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pydantic = "^2.10.5"
+vcon = {path = "../", develop = true}
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+pytest-cov = "^5.0.0"
+ruff = "^0.9.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = "src"
+testpaths = ["tests"]
+python_files = ["test_*.py"] 
