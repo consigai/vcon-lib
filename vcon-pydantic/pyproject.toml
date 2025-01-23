@@ -4,7 +4,6 @@ version = "0.1.0"
 description = "Pydantic-v2 models for vCon"
 authors = ["Andreea Olea <andreea@consig.ai>"]
 packages = [
-    {include = "vcon", from = "../src"},
     {include = "vcon_pydantic", from = "src"}
 ]
 
